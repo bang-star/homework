@@ -1,16 +1,19 @@
 public class Bus extends Vehicle implements Runnable, Stoppable, Drivable{
 
+    public Bus(){
+        this(500, 100, 0, 0, 40);
+    }
 
-    public Bus(int fee, int fuel, int routeNum, int curSpeed, int curPassenger, int maxPassenger) {
-        super(fee, fuel, routeNum, curSpeed, curPassenger, maxPassenger);
-        run();
-        setProfit(curPassenger*fee);
+    public Bus(int fee, int fuel, int curSpeed, int curPassenger, int maxPassenger) {
+        super(fee, fuel, curSpeed, curPassenger, maxPassenger);
+        run(); setProfit(curPassenger*fee);
     }
 
     @Override
     public void run() {
         if(getFuel() < 10){
             System.out.println("주유가 필요합니다.");
+            stop();
         }else {
             setStatus(Status.RUN);
             System.out.println("**운행중**");
