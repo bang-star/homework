@@ -10,13 +10,13 @@ public class Vehicle {
     private int profit;             // 수익
 
     public void setProfit(int profit) {
-        this.profit = profit;
+        this.profit += profit;
     }
 
-    public Vehicle(int fee, int fuel, int routeNum, int curSpeed, int curPassenger, int maxPassenger) {
+    public Vehicle(int fee, int fuel, int curSpeed, int curPassenger, int maxPassenger) {
         this.fee = fee;
         this.fuel = fuel;
-        this.routeNum = routeNum;
+        this.routeNum = (int)(Math.random()*1000)+1;
         this.curSpeed = curSpeed;
         this.curPassenger = curPassenger;
         this.maxPassenger = maxPassenger;

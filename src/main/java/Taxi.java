@@ -4,8 +4,8 @@ public class Taxi extends Vehicle implements Runnable, Stoppable, Drivable {
     private int toDestination;          // 목적지까지 거리
     private String destination;         // 목적지
 
-    public Taxi(int fee, int fuel, int routeNum, int curSpeed, int maxPassenger, int basicDistance, int feePerDistance) {
-        super(fee, fuel, routeNum, curSpeed, 0, maxPassenger);
+    public Taxi(int fee, int fuel, int curSpeed, int maxPassenger, int basicDistance, int feePerDistance) {
+        super(fee, fuel, curSpeed, 0, maxPassenger);
         this.feePerDistance = feePerDistance;
         this.basicDistance = basicDistance;
         this.toDestination = 0;
@@ -95,8 +95,6 @@ public class Taxi extends Vehicle implements Runnable, Stoppable, Drivable {
             System.out.println("현재 고객이 탑승중이지 않습니다.");
             return;
         }
-
-
         stop();
         int profit = calculate();
         setProfit(profit);
