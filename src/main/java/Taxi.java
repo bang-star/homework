@@ -120,5 +120,6 @@ public class Taxi extends Vehicle implements Runnable, Stoppable, Drivable {
     public void showInfo() {
         System.out.println("Taxi : " + this.getRouteNum() + " - 승객 수 : " + this.getCurPassenger() + " - 수익 : " + this.getProfit());
         System.out.println("현재 속도 : " + this.getCurSpeed() + " 현상 상태 :" + getStatus());
+        System.out.println();
     }
 }

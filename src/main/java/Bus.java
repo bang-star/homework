@@ -6,7 +6,8 @@ public class Bus extends Vehicle implements Runnable, Stoppable, Drivable{
 
     public Bus(int fee, int fuel, int curSpeed, int curPassenger, int maxPassenger) {
         super(fee, fuel, curSpeed, curPassenger, maxPassenger);
-        run(); setProfit(curPassenger*fee);
+        run();
+        setProfit(curPassenger*fee);
     }
 
     @Override
@@ -100,6 +101,7 @@ public class Bus extends Vehicle implements Runnable, Stoppable, Drivable{
 
     public void showInfo() {
         System.out.println("Bus : "+this.getRouteNum()+"번 버스는 승객 수 : "+this.getCurPassenger()+"명 수익 : "+this.getProfit());
-        System.out.println("현재 속도 : "+this.getCurSpeed()+" 현재 연료량"+getFuel()+" 현상 상태 :"+getStatus());
+        System.out.println("현재 속도 : "+this.getCurSpeed()+" 현재 연료량 :"+getFuel()+" 현상 상태 :"+getStatus());
+        System.out.println();
     }
 }

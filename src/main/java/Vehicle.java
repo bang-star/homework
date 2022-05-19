@@ -68,7 +68,7 @@ public class Vehicle {
     }
 
     public void setFuel(int fuel) {
-        this.fuel = fuel;
+        this.fuel += fuel;
     }
 
     void getOn(int count){}

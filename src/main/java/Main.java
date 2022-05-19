@@ -10,14 +10,12 @@ public class Main {
         bus.speedUp(50);
 
         bus.getOn(50);
-
-        bus.showInfo();
+        System.out.println("===========================================================");
 
         Taxi taxi = new Taxi(2000, 800, 0, 5, 100, 500);
         taxi.showInfo();
         taxi.getOn(100, "서울", 500);
         taxi.showInfo();
         taxi.getOff();
-
     }
 }
